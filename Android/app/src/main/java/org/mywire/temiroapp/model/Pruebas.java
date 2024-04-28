@@ -6,13 +6,13 @@ import android.database.Cursor;
 import android.util.Log;
 import org.mywire.temiroapp.data.local.DatosSQL;
 
-public class Test extends DatosSQL {
+public class Pruebas extends DatosSQL {
 
     private int idTest;
     private String nombre;
     private int cantidadPasos;
 
-    public Test(Context ctx) {
+    public Pruebas(Context ctx) {
         super(ctx);
         limpiarCampos();
     }
