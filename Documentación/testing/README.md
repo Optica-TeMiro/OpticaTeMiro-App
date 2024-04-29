@@ -1,0 +1,1 @@
+Las pruebas fueron realizadas en Selenium. 
