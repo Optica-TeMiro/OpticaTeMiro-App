@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import org.mywire.temiroapp.R;
 import org.mywire.temiroapp.data.prefs.PreferencesHelper;
-import org.mywire.temiroapp.model.Test;
+import org.mywire.temiroapp.model.Pruebas;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,7 +71,7 @@ public class TestDaltonismo1 extends Fragment {
         ctx = getActivity();
         View vista = inflater.inflate(R.layout.test_frag_daltonismo1, container, false);
 
-        Test TD1 = new Test(ctx);
+        Pruebas TD1 = new Pruebas(ctx);
         TD1.setIdTest(4);
         TD1.setNombre("Daltonismo Básico");
         TD1.setCantidadPasos(3);
