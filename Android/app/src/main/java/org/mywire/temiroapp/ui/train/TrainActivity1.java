@@ -9,12 +9,14 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import org.mywire.temiroapp.R;
 import org.mywire.temiroapp.ui.user.LoginActivity;
+import org.mywire.temiroapp.data.prefs.ConfigAPI;
 import org.mywire.temiroapp.data.prefs.PreferencesHelper;
 import android.net.Uri;
 import android.widget.VideoView;
 
 public class TrainActivity1 extends AppCompatActivity {
 
+    private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
     boolean esUsuarioRegistrado;
     String nombreUsuario;
     int idUsuario;
@@ -59,7 +61,7 @@ public class TrainActivity1 extends AppCompatActivity {
                     mensajeParpadeo.setVisibility(View.VISIBLE);
                     descripcionTextView.setText(getString(R.string.descripcion_parpadeo));
                     // Reemplaza "videoUrlParpadeo" por la URL correcta del video
-                    String videoUrlParpadeo = "http://temiro.mywire.org:8000/media/video/parpadeo_1.mp4";
+                    String videoUrlParpadeo = UbicacionAPI + "media/video/parpadeo_1.mp4";
                     videoView.setVideoURI(Uri.parse(videoUrlParpadeo));
                     videoView.start();
                 } else {
@@ -80,7 +82,7 @@ public class TrainActivity1 extends AppCompatActivity {
                     mensajeCuerda.setVisibility(View.VISIBLE);
                     descripcionTextView.setText(getString(R.string.descripcion_enfoque));
                     // Reemplaza "videoUrlCuerda" por la URL correcta del video
-                    String videoUrlEnfoque = "http://temiro.mywire.org:8000/media/video/enfoque_1.mp4";
+                    String videoUrlEnfoque = UbicacionAPI + "media/video/enfoque_1.mp4";
                     videoView.setVideoURI(Uri.parse(videoUrlEnfoque));
                     videoView.start();
                 } else {
@@ -101,7 +103,7 @@ public class TrainActivity1 extends AppCompatActivity {
                     mensajeMovimiento.setVisibility(View.VISIBLE);
                     descripcionTextView.setText(getString(R.string.descripcion_movimiento));
                     // Reemplaza "videoUrlMovimiento" por la URL correcta del video
-                    String videoUrlMovimiento = "http://temiro.mywire.org:8000/media/video/movimiento_1.mp4";
+                    String videoUrlMovimiento = UbicacionAPI + "media/video/movimiento_1.mp4";
                     videoView.setVideoURI(Uri.parse(videoUrlMovimiento));
                     videoView.start();
                 } else {

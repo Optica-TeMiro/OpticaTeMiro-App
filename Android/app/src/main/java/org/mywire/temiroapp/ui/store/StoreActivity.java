@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.mywire.temiroapp.MainActivity;
 import org.mywire.temiroapp.R;
+import org.mywire.temiroapp.data.prefs.ConfigAPI;
 import org.mywire.temiroapp.data.prefs.PreferencesHelper;
 import org.mywire.temiroapp.data.remote.ApiService;
 import org.mywire.temiroapp.model.Venta;
@@ -28,6 +29,7 @@ public class StoreActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private VentaAdapter ventaAdapter;
+    private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,7 +44,7 @@ public class StoreActivity extends AppCompatActivity {
 
         // Inicializa Retrofit
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://temiro.mywire.org:8000/")
+                .baseUrl(UbicacionAPI)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
