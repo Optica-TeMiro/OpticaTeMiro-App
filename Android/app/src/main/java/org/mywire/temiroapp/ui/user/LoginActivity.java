@@ -9,6 +9,7 @@ import android.widget.Toast;
 import android.util.Log;
 import org.mywire.temiroapp.MainActivity;
 import org.mywire.temiroapp.R;
+import org.mywire.temiroapp.data.prefs.ConfigAPI;
 import org.mywire.temiroapp.data.prefs.PreferencesHelper;
 import org.mywire.temiroapp.data.remote.ApiService;
 import org.mywire.temiroapp.model.User;
@@ -20,6 +21,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
 
     public interface LoginUserCallbacks {
         void onSuccess(Boolean value);
@@ -116,7 +119,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void traerDatosUsuario(String nombreU) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://temiro.mywire.org:8000/")
+                .baseUrl(UbicacionAPI)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         // se obtiene el nombre de usuario de la API de usuario
