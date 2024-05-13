@@ -66,6 +66,12 @@
             android:name=".ui.user.PerfilUsuarioActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.product.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.main.SitioWebActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.SplashScreenStart"
             android:exported="true"
             android:theme="@style/SplashScreentheme">

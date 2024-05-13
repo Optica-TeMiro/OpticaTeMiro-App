@@ -58,4 +58,11 @@
         android:text="Descripción del producto aquí"
         android:layout_marginTop="16dp" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:text="Comprar" />
+
 </LinearLayout>
