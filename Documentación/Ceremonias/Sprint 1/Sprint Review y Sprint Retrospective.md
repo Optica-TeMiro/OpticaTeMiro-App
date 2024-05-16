@@ -1,0 +1,13 @@
+# Domingo 15 de mayo de 2024 
+Siendo las 22 hs del día 15 de mayo de 2024 se realiza la Sprint Review y Sprint Retrospective del Sprint 0. Participaron todos los integrantes del Equipo.
+
+En la misma realizamos lo siguiente:
+
+1. Vimos y analizamos punto por punto de la Documentación comiteada por cada integrante del Grupo (Requerimientos Funcionales y No Funcionales, Historias de Usuarios, Épicas y Documento IEEE830, issues, tk).
+
+2. Revisamos las tareas que cada integrante del grupo propuso y cocorregimos aquellas que necesitaban correcciones.
+
+3. Quedamos en qe el dia el domingo se realizará la reunion Sprint planning del siguiente sprint 2
+
+
+Siendo las 23:20hs se dió por finalizada la Sprint Review y Sprint Retrospective del Sprint 0 y se procede a fusionar (merge) la rama develop a la rama Main.
