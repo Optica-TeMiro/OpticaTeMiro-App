@@ -10,6 +10,7 @@ import android.widget.TextView;
 import org.mywire.temiroapp.data.local.SQLmanager;
 import org.mywire.temiroapp.data.prefs.PreferencesHelper;
 import org.mywire.temiroapp.ui.main.ContactoUno;
+import org.mywire.temiroapp.ui.main.SitioWebActivity;
 import org.mywire.temiroapp.ui.product.ProductsServicesPpal;
 import org.mywire.temiroapp.ui.quote.TurneroActivity;
 import org.mywire.temiroapp.ui.store.StoreActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean esUsuarioRegistrado;
     String nombreUsuario;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,4 +107,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(act);
     }
 
+    // Epica 8 - Acceso al Sitio Web desde el Menú Principal de la App -----------------------------
+    public void irAlSitioWeb(View view) {
+        Intent intent = new Intent(this, SitioWebActivity.class);
+        startActivity(intent);
+    }
+
 }
+
+
+
+
+
+
+
+

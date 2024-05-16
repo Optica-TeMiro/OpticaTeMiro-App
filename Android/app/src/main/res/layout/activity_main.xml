@@ -114,6 +114,14 @@
             android:onClick="iniciarContacto"
             android:text="CONTACTO"
             style="@style/botonesMenu"/>
+
+        <Button
+            android:id="@+id/botonIrSitioWeb"
+            style="@style/botonesMenu"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:onClick="irAlSitioWeb"
+            android:text="Ir al sitio web" />
     </LinearLayout>
 
     <ImageView
@@ -142,5 +150,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.127"
         android:contentDescription="@string/logo_app_descripcion"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

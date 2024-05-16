@@ -14,6 +14,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import org.mywire.temiroapp.data.prefs.ConfigAPI;
 import org.mywire.temiroapp.data.remote.ProductService;
 import org.mywire.temiroapp.R;
 import org.mywire.temiroapp.model.Product;
@@ -22,6 +23,7 @@ import java.util.List;
 public class ProductView extends Fragment {
 
     private ProductService apiService;
+    private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -35,7 +37,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -74,7 +76,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -113,7 +115,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -152,7 +154,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -191,7 +193,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -230,7 +232,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -269,7 +271,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -308,7 +310,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -347,7 +349,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
@@ -386,7 +388,7 @@ public class ProductView extends Fragment {
                 Log.d("ProductView", "Botón Ver Más clickeado");
 
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://temiro.mywire.org:8000/")
+                        .baseUrl(UbicacionAPI)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 

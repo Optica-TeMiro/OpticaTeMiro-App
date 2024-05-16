@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/topmenu"
+        android:name="org.mywire.temiroapp.ui.main.TopMenuFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        tools:layout="@layout/main_frag_top_menu" />
+
+    <ImageView
+        android:id="@+id/imagenSitioWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topmenu"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/imagen_sitio_web" />
+
+    <TextView
+        android:id="@+id/descripcionSitioWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imagenSitioWeb"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="Bienvenido a nuestro sitio web, tu destino para todo lo relacionado con la visión y el cuidado ocular. Explora nuestra amplia selección de lentes de calidad, desde lentes de contacto hasta gafas de sol y lentes oftálmicas. Además de nuestra oferta de productos, también ofrecemos una gama de servicios especializados, que incluyen un taller de montaje experto para garantizar un ajuste perfecto, exámenes visuales completos para mantener tu salud ocular en óptimas condiciones, y un seguro contra rotura de cristales para proteger tus lentes de cualquier accidente inesperado. Descubre cómo podemos ayudarte a ver mejor y sentirte mejor aquí en nuestro sitio web."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/imagenSitioWeb" />
+
+
+    <Button
+        android:id="@+id/botonAbrirsitioWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descripcionSitioWeb"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/buttonColor"
+        android:onClick="abrirSitioWeb"
+        android:text="Abrir Sitio Web" />
+
+</RelativeLayout>
