@@ -1,7 +1,10 @@
 package org.mywire.temiroapp.ui.product;
 
+import static android.app.PendingIntent.getActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,7 +29,6 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private ImageView productImage;
     private TextView productName, productPrice, productDescription, productDetalle;
-    private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
     private Button buyButton;
 
     @Override
@@ -53,9 +55,9 @@ public class ProductDetailActivity extends AppCompatActivity {
         });
 
         if (productUrl != null) {
-
+            // Aquí puedes realizar la llamada a Retrofit utilizando la URL del producto
             Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(UbicacionAPI)
+                    .baseUrl(productUrl) // Usar la URL del producto como base URL
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
@@ -79,7 +81,6 @@ public class ProductDetailActivity extends AppCompatActivity {
                                         .error(R.drawable.ic_launcher_background)
                                         .diskCacheStrategy(DiskCacheStrategy.ALL))
                                 .into(productImage);
-
                     } else {
                         Toast.makeText(ProductDetailActivity.this, "Error al cargar los detalles del producto", Toast.LENGTH_SHORT).show();
                     }
