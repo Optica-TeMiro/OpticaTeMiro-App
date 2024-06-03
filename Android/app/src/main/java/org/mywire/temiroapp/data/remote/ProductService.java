@@ -14,4 +14,7 @@ public interface ProductService {
     @GET("webapi/producto/{productId}")
     Call<Product> getProductById(@Path("productId") int productId);
 
+    @GET("webapi/{url}")
+    Call<Product> getProductByUrl(@Path("url") String url);
+
 }

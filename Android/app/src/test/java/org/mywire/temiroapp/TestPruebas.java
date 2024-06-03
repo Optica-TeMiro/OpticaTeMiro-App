@@ -7,8 +7,8 @@ public class TestPruebas {
 
     @Test
     public void busquedaPrimerElemento() {
-        Pruebas T = new Pruebas(null);
-        if (T.buscar(0) && T.getNombre()=="No definido") {
+        Pruebas P = new Pruebas(null);
+        if (P.buscar(0) && P.getNombre()=="No definido") {
             assert(true);
         } else {
             assert(false);

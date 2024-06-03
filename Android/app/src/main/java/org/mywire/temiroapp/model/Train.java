@@ -6,6 +6,13 @@ public class Train {
     private String description;
     private String videoUrl;
 
+    public Train() {
+        this.id = 0;
+        this.title = "";
+        this.description = "";
+        this.videoUrl = "";
+    }
+
     public Train(int id, String title, String description, String videoUrl) {
         this.id = id;
         this.title = title;
