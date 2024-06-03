@@ -18,6 +18,6 @@ public interface ProductService {
     @GET("webapi/producto/{productId}")
     Call<Product> getProductById(@Path("productId") int productId);
 
-    @GET
+    @GET("webapi/{url}")
     Call<Product> getProductByUrl(@Url String url);
 }
