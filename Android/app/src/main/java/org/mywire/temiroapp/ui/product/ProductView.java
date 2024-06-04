@@ -23,7 +23,7 @@ import java.util.List;
 public class ProductView extends Fragment {
 
     private ProductService productService;
-   //  private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
+    //  private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
 
     // Lista de URLs de productos
     private static final String[] PRODUCT_URLS = {
@@ -57,10 +57,14 @@ public class ProductView extends Fragment {
         return rootView;
     }
 
-    // Método auxiliar para iniciar ProductDetailActivity con la URL del producto
     private void startProductDetailActivity(String productUrl) {
-        Intent intent = new Intent(getActivity(), ProductDetailActivity.class);
-        intent.putExtra("productUrl", productUrl);
-        startActivity(intent);
+        if (productUrl != null && !productUrl.isEmpty()) {
+            Intent intent = new Intent(getActivity(), ProductDetailActivity.class);
+            intent.putExtra("productUrl", productUrl);
+            startActivity(intent);
+        } else {
+            Log.e("ProductView", "URL de producto nula o vacía");
+        }
     }
+
 }
