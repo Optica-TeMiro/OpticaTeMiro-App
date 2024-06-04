@@ -7,20 +7,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
-
 import org.mywire.temiroapp.R;
-import org.mywire.temiroapp.model.Product;
 import org.mywire.temiroapp.data.prefs.ConfigAPI;
+import org.mywire.temiroapp.model.Product;
 import org.mywire.temiroapp.data.remote.ProductService;
-import org.mywire.temiroapp.ui.product.*;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -39,7 +34,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.product_detail);
 
-        int productId = getIntent().getIntExtra("productId", -1);
+        String productUrl = getIntent().getStringExtra("productUrl");
 
         productImage = findViewById(R.id.productImage);
         productName = findViewById(R.id.productName);
@@ -57,7 +52,7 @@ public class ProductDetailActivity extends AppCompatActivity {
             }
         });
 
-        if (productId != -1) {
+        if (productUrl != null) {
 
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl(UbicacionAPI)
@@ -65,7 +60,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                     .build();
 
             ProductService productService = retrofit.create(ProductService.class);
-            Call<Product> call = productService.getProductById(productId);
+            Call<Product> call = productService.getProductByUrl(productUrl);
             call.enqueue(new Callback<Product>() {
                 @Override
                 public void onResponse(Call<Product> call, Response<Product> response) {
@@ -92,11 +87,20 @@ public class ProductDetailActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<Product> call, Throwable t) {
-                    Toast.makeText(ProductDetailActivity.this, "Error de red", Toast.LENGTH_SHORT).show();
+                    // Mensaje de error genérico
+                    String errorMessage = "Error de red";
+
+                    // Verificar si la excepción tiene un mensaje
+                    if (t != null && t.getMessage() != null) {
+                        errorMessage = "Error de red: " + t.getMessage();
+                    }
+
+                    // Mostrar el mensaje de error
+                    Toast.makeText(ProductDetailActivity.this, errorMessage, Toast.LENGTH_SHORT).show();
                 }
             });
         } else {
-            Toast.makeText(ProductDetailActivity.this, "Producto incorrecto !", Toast.LENGTH_LONG).show();
+            Toast.makeText(ProductDetailActivity.this, "URL de producto incorrecta!", Toast.LENGTH_LONG).show();
         }
     }
 }
