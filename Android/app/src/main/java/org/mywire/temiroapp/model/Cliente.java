@@ -14,6 +14,20 @@ public class Cliente {
     private String celular;
     private String fechanac;
 
+    public Cliente() {
+        this.idcliente = 0;
+        this.idusuario = 0;
+        this.apellido = "";
+        this.nombre = "";
+        this.dni = 0;
+        this.direccion = "";
+        this.email = "";
+        this.idciudad = 0;
+        this.telefono = "";
+        this.celular = "";
+        this.fechanac = "";
+    }
+
     public Cliente(int idcliente, int idusuario, String apellido, String nombre, int dni, String direccion, String email, int idciudad, String telefono, String celular, String fechanac) {
         this.idcliente = idcliente;
         this.idusuario = idusuario;
