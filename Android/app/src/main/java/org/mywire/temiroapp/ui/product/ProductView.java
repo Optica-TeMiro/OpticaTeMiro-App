@@ -22,6 +22,7 @@ import java.util.List;
 
 public class ProductView extends Fragment {
 
+
     private ProductService productService;
     //  private String UbicacionAPI = ConfigAPI.webapi_URL + ":" + ConfigAPI.webapi_PORT + "/";
 
@@ -38,9 +39,11 @@ public class ProductView extends Fragment {
             "https://django-auth-crud-hvkm.onrender.com/lentes-para-lejos/"
     };
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.product_ppal, container, false);
+
 
         // Configuración de los botones
         for (int i = 0; i < PRODUCT_URLS.length; i++) {
@@ -53,6 +56,7 @@ public class ProductView extends Fragment {
                 }
             });
         }
+
 
         return rootView;
     }

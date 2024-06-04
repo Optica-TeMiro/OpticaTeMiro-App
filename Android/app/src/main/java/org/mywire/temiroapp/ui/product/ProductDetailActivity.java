@@ -1,15 +1,19 @@
 package org.mywire.temiroapp.ui.product;
 
+
 import static android.app.PendingIntent.getActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
@@ -19,6 +23,7 @@ import org.mywire.temiroapp.R;
 import org.mywire.temiroapp.data.prefs.ConfigAPI;
 import org.mywire.temiroapp.model.Product;
 import org.mywire.temiroapp.data.remote.ProductService;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,6 +34,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     private ImageView productImage;
     private TextView productName, productPrice, productDescription, productDetalle;
+
     private Button buyButton;
 
     @Override
@@ -45,6 +51,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         productDetalle = findViewById(R.id.productDetalle);
         buyButton = findViewById(R.id.button);
 
+
         buyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +64,9 @@ public class ProductDetailActivity extends AppCompatActivity {
         if (productUrl != null) {
             // Aquí puedes realizar la llamada a Retrofit utilizando la URL del producto
             Retrofit retrofit = new Retrofit.Builder()
+
                     .baseUrl(productUrl) // Usar la URL del producto como base URL
+
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 
