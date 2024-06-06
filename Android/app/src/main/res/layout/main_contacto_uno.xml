@@ -6,30 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.ContactoUno">
 
-    <TextView
-        android:id="@+id/tectoContactoUno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
-        android:text="CONTACTO"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/logoMarcaContactoUno"
-        android:layout_width="323dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="477dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        android:contentDescription="@string/logo_app_descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/textoFormularioDeConsulta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/main_logo"
-        android:contentDescription="@string/logo_app_descripcion"/>
+        app:layout_constraintVertical_bias="0.266"
+        app:srcCompat="@drawable/main_logo" />
 
     <TextView
         android:id="@+id/textoFormularioDeConsulta"
